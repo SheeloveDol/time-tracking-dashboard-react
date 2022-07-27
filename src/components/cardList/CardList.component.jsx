@@ -1,10 +1,10 @@
-import { Box, Text, Grid } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 
 const CardList = ({children}) => {
     return (
-        <Grid border='1px' p='4rem' gap='1rem'>
+        <Flex border='1px' p='1rem' columns={[1, 2]} maxWidth='850px' direction={['column', 'row']} gap='1rem' justify-content='space-between'>
             {children}
-        </Grid>
+        </Flex>
     )
 };
 
