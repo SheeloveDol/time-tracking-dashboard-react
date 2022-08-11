@@ -1,25 +1,50 @@
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex, Button, Image, Stack, Text } from "@chakra-ui/react";
+
+import avatar from '../../assets/image-jeremy.png'
 
 const HeaderCard = () => {
+
+    const period = 'daily'
+
     return (
         <Flex 
-            border='1px' 
             w={['100%', '255px']} 
             h={['203px', '518px']}
             direction='column'
+            borderRadius='xl'
+            bgColor='#1C204B'
             >
-            <Box 
-                p='2rem' 
-                bgColor='blue.400'
-                flex='2'
-                >
 
-            </Box>
-            <Box p='1rem' bgColor='purple.300'
+            <Flex 
+                borderRadius='xl'
+                p='2rem' 
+                bgColor='#5747EA'
+                flex='2'
+                direction='column'
+            >
+                
+                    <Image 
+                        borderRadius='full'
+                        border='1px'
+                        boxSize='75px' 
+                        objectFit='cover'
+                        src={avatar}
+                        alt='Jeremy Robson'
+                    />
+
+                    <Box border='1px'>
+                    
+                    </Box>
+                
+            </Flex>x
+
+            <Box p='1rem' bgColor='#1C204B'
             flex='1'>
-                <Button>Daily</Button>
-                <Button>Weekly</Button>
-                <Button>Monthly</Button>
+                <Stack direction={['row', 'column']}>
+                    { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' >Daily</Text> }
+                    { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' >Weekly</Text> }
+                    { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' >Monthly</Text> }
+                </Stack>
             </Box>
         </Flex>
     )
