@@ -1,10 +1,13 @@
 import { Box, Flex, Button, Image, Stack, Text } from "@chakra-ui/react";
+import { useContext } from "react";
 
 import avatar from '../../assets/image-jeremy.png'
+import TimePeriodContext from "../../context/TimePeriodContext";
 
 const HeaderCard = () => {
 
-    const period = 'daily'
+    const { period, handleDailyClick, handleWeeklyClick, handleMonthlyClick } = useContext(TimePeriodContext)
+    
 
     return (
         <Flex 
@@ -41,9 +44,9 @@ const HeaderCard = () => {
             <Box p='1rem' bgColor='#1C204B'
             flex='1'>
                 <Stack direction={['row', 'column']}>
-                    { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' >Daily</Text> }
-                    { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' >Weekly</Text> }
-                    { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' >Monthly</Text> }
+                    { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick}>Daily</Text> }
+                    { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick}>Weekly</Text> }
+                    { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick}>Monthly</Text> }
                 </Stack>
             </Box>
         </Flex>
@@ -51,3 +54,5 @@ const HeaderCard = () => {
 }
 
 export default HeaderCard;
+
+//TODO: Need to add onClick function to each button.
