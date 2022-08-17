@@ -1,6 +1,5 @@
 import { Box, Text, Flex, SimpleGrid, Button } from "@chakra-ui/react";
 import HeaderCard from "../headerCard/HeaderCard.component";
-import { useState } from "react";
 import { useContext } from 'react'
 import TimePeriodContext from "../../context/TimePeriodContext";
 
@@ -20,28 +19,30 @@ const CardList = () => {
                             w={['327px', '255px']} border='2px'  h='239px' >
 
                             <Box mt='40px' w='100%' bg={item.cardBgColor} h='199px' borderRadius='lg' >
-                                <Flex p='.5rem' w='80%' color='white' m='auto' justify='space-between'>
-                                    <Box>
-                                        <Text  fontSize='sm'>{item.title}</Text>
-                                    </Box>
-                                    <Box >
-                                        <Text fontSize='lg'>...</Text>
-                                    </Box>
-                                </Flex>
-                                    
-                                <Flex border='1px' color='white' justify='space-between' direction={['row', 'column']}>
-                                    <Text fontSize='6xl'>
-                                        {period === 'monthly' && item.timeframes.monthly.current} 
-                                        {period === 'weekly' && item.timeframes.weekly.current} 
-                                        {period === 'daily' && item.timeframes.daily.current}hrs
-                                    </Text>
+                                <Flex direction='column' w='80%' mx='auto'  color='white' pt='0.5rem'>
+                                    <Flex p='.5rem'  color='white' m='auto' justify='space-between' w='100%'>
+                                        <Box>
+                                            <Text  fontSize='sm'>{item.title}</Text>
+                                        </Box>
+                                        <Box >
+                                            <Text fontSize='lg'>...</Text>
+                                        </Box>
+                                    </Flex>
+                                        
+                                    <Flex  color='white' justify='space-between' direction={['row', 'column']}>
+                                        <Text fontSize='6xl'>
+                                            {period === 'monthly' && item.timeframes.monthly.current} 
+                                            {period === 'weekly' && item.timeframes.weekly.current} 
+                                            {period === 'daily' && item.timeframes.daily.current}hrs
+                                        </Text>
 
-                                    <Box border='1px'>
-                                        {period === 'daily' && <Text>Yesterday - {item.timeframes.daily.previous}</Text>}
-                                        {period === 'weekly' && <Text>Last week - {item.timeframes.weekly.previous}</Text>}
-                                        {period === 'monthly' && <Text>Last month - {item.timeframes.monthly.previous}</Text>}
-                                    </Box>
-                                </Flex>  
+                                        <Box >
+                                            {period === 'daily' && <Text>Yesterday - {item.timeframes.daily.previous}hrs</Text>}
+                                            {period === 'weekly' && <Text>Last week - {item.timeframes.weekly.previous}hrs</Text>}
+                                            {period === 'monthly' && <Text>Last month - {item.timeframes.monthly.previous}hrs</Text>}
+                                        </Box>
+                                    </Flex>  
+                                </Flex>
                             </Box>
 
                         </Box>
