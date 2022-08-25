@@ -40,7 +40,7 @@ const HeaderCard = () => {
                     
                     </Box>
                 
-            </Flex>x
+            </Flex>
 
             <Box  
                 bgColor='#1C204B'
