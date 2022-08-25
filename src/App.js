@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import CardList from "./components/cardList/CardList.component";
 import userData from "./data/userData";
 import { useState } from 'react'
@@ -11,9 +11,16 @@ function App() {
 
     return (
       <TimePeriodProvider>
-        <Box h='512px'>
+        <Grid
+          // border='2px'
+          // borderColor='red'
+          w={['375px', null, null, '1290px']}
+          h={['100%', null, null, '100vh']}
+          m='auto'
+          bgColor='hsl(226, 43%, 10%)'
+        >
             <CardList />
-        </Box>
+        </Grid>
       </TimePeriodProvider>
 
     );

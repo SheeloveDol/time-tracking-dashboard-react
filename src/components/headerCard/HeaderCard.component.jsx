@@ -11,11 +11,12 @@ const HeaderCard = () => {
 
     return (
         <Flex 
-            w={['100%', '255px']} 
-            h={['203px', '518px']}
-            direction='column'
             borderRadius='xl'
+            w={['327px', '327px', '327px', '255px']} 
+            h={['203px', '203px', '203px', '518px']}
+            direction='column'
             bgColor='#1C204B'
+            mx='auto'
             >
 
             <Flex 
@@ -41,12 +42,19 @@ const HeaderCard = () => {
                 
             </Flex>x
 
-            <Box p='1rem' bgColor='#1C204B'
-            flex='1'>
-                <Stack direction={['row', 'column']}>
-                    { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick}>Daily</Text> }
-                    { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick}>Weekly</Text> }
-                    { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick}>Monthly</Text> }
+            <Box  
+                bgColor='#1C204B'
+                flex='1'
+                borderRadius='xl'>
+                
+                <Stack 
+                
+                    direction={['row',null, null, 'column']}
+                    justify='space-evenly'
+                >
+                        { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick}>Daily</Text> }
+                        { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick}>Weekly</Text> }
+                        { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick}>Monthly</Text> }
                 </Stack>
             </Box>
         </Flex>
