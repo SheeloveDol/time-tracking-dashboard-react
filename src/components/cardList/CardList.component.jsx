@@ -84,6 +84,7 @@ const CardList = () => {
                                         color='white' 
                                         justify='space-between' 
                                         direction={['row', null, null, 'column']}
+                                        // alignItems={['flex-end', null, null, null]}
                                     >
                                         <Box>
                                             <Text fontSize={['3xl', null, null, '6xl']}>
@@ -94,9 +95,9 @@ const CardList = () => {
                                         </Box>
 
                                         <Box >
-                                            {period === 'daily' && <Text>Yesterday - {item.timeframes.daily.previous}hrs</Text>}
-                                            {period === 'weekly' && <Text>Last week - {item.timeframes.weekly.previous}hrs</Text>}
-                                            {period === 'monthly' && <Text>Last month - {item.timeframes.monthly.previous}hrs</Text>}
+                                            {period === 'daily' && <Text pt={['15px', null, null, '0px']} color='#BBC0FF'>Yesterday - {item.timeframes.daily.previous}hrs</Text>}
+                                            {period === 'weekly' && <Text pt={['15px', null, null, '0px']} color='#BBC0FF'>Last week - {item.timeframes.weekly.previous}hrs</Text>}
+                                            {period === 'monthly' && <Text pt={['15px', null, null, '0px']} color='#BBC0FF'>Last month - {item.timeframes.monthly.previous}hrs</Text>}
                                         </Box>
                                     </Flex>  
                                 </Flex>
