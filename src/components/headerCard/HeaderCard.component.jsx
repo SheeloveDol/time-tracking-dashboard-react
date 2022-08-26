@@ -10,37 +10,52 @@ const HeaderCard = () => {
     
 
     return (
-        <Flex 
+        <Flex
             borderRadius='xl'
-            w={['327px', '327px', '327px', '255px']} 
+            w={['327px', null, null, '255px']} 
             h={['203px', '203px', '203px', '518px']}
             direction='column'
             bgColor='#1C204B'
             mx='auto'
             >
 
-            <Flex 
+            <Stack 
                 borderRadius='xl'
                 p='2rem' 
                 bgColor='#5747EA'
                 flex='2'
-                direction='column'
+                direction={['row', null, null, 'column']}
+                spacing={['1rem', null, null, '2rem']}
             >
                 
                     <Image 
                         borderRadius='full'
-                        border='1px'
+                        border='4px'
+                        borderColor='white'
                         boxSize='75px' 
                         objectFit='cover'
                         src={avatar}
                         alt='Jeremy Robson'
                     />
 
-                    <Box border='1px'>
-                    
-                    </Box>
+                    <Stack>
+                        <Text 
+                            color='#7078C9'
+                            fontSize='lg'
+                            
+                        >
+                            Report for
+                        </Text>
+
+                        <Text 
+                            color='white'
+                            fontSize={['xl', null, null, '4xl']}
+                        >
+                            Jeremy Robson
+                        </Text>
+                    </Stack>
                 
-            </Flex>
+            </Stack>
 
             <Box  
                 bgColor='#1C204B'

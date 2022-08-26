@@ -72,10 +72,22 @@ const CardList = () => {
                                         w='100%'
                                     >
                                         <Box>
-                                            <Text  fontSize='md'>{item.title}</Text>
+                                            <Text 
+                                                as='b' 
+                                                fontSize='md'
+                                            >
+                                                {item.title}
+                                            </Text>
                                         </Box>
+
                                         <Box >
-                                            <Text fontSize='lg'>...</Text>
+                                            <Text
+                                                as='b'
+                                                fontSize='lg'
+                                                color='#7078C9'
+                                            >
+                                                ...
+                                            </Text>
                                         </Box>
                                     </Flex>
                                         
