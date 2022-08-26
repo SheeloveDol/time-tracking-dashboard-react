@@ -51,11 +51,11 @@ const CardList = () => {
                         >
 
                             <Box
-                                border='1px'
-                                borderColor='blue.300'
+                                // border='1px'
+                                // borderColor='red.300'
                                 w='80%'
                                 mx='auto'
-                                marginTop='1rem'
+                                paddingTop={['1.5rem', null, null, '1rem']}
                             >
                             
                                 <Flex 
@@ -66,7 +66,7 @@ const CardList = () => {
                                     // pt='0.5rem'
                                 >
                                     <Flex 
-                                        p='.5rem'  
+                                        pt='.5rem'  
                                         color='white' 
                                         m='auto' 
                                         justify='space-between' 
