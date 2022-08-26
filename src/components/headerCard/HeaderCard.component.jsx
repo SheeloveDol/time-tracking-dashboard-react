@@ -45,12 +45,18 @@ const HeaderCard = () => {
             <Box  
                 bgColor='#1C204B'
                 flex='1'
-                borderRadius='xl'>
+                // border='1px'
+                // borderColor='white'
+                borderRadius='xl'
+                mx='2rem' 
+                // my='1.5rem'
+                pt={['1rem', null, null, '2.5rem']}   
+            >
                 
                 <Stack 
                 
                     direction={['row',null, null, 'column']}
-                    justify='space-evenly'
+                    justify='space-between'
                 >
                         { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick}>Daily</Text> }
                         { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick}>Weekly</Text> }

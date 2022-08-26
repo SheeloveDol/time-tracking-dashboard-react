@@ -9,14 +9,13 @@ const CardList = () => {
 
     return (
         <Grid 
-            h={[null, null, null, '518px']}
-            w={['375px', null, null, '1110px']}
             templateRows={[null, null, null, 'repeat(2, 1fr)']}
             templateColumns={[null, null, null, 'repeat(4, 1fr)']}
             mx='auto'
             my='auto'
             px='auto'
             gap='1.5rem'
+            py={['3rem', null, null, '0rem']}
             bgColor='hsl(226, 43%, 10%)'
          >
             <GridItem

@@ -14,7 +14,7 @@ function App() {
         <Grid
           // border='2px'
           // borderColor='red'
-          w={['375px', null, null, '1290px']}
+          w={['100vw', null, null, '1290px']}
           h={['100%', null, null, '100vh']}
           m='auto'
           bgColor='hsl(226, 43%, 10%)'
