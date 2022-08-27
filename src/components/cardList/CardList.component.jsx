@@ -1,4 +1,4 @@
-import { Box, Text, Flex, SimpleGrid, Grid, GridItem, Button } from "@chakra-ui/react";
+import { Box, Text, Flex, Image, Grid, GridItem, Button } from "@chakra-ui/react";
 import HeaderCard from "../headerCard/HeaderCard.component";
 import { useContext } from 'react'
 import TimePeriodContext from "../../context/TimePeriodContext";
@@ -38,16 +38,30 @@ const CardList = () => {
                         m='auto' 
                         w={['327px', null, null, '255px']}
                         h={[null, null, null, '244px' ]}
+                        justify='normal'
                         // border='2px'  
                         
                     >
+                        <Box
+                            ml={['12rem', null, null, '10rem']}
+                        >
+                            <Image
+                                w={['90px', null, null, '100px']}
+                                h='45px'
+                                ml={['2.5rem', null, null, '0']}
+                                objectFit='none'
+                                src={item.image}
+                            />
+                        </Box>
+
                         <Box 
                             bg={item.cardBgColor} 
-                            mt='17%' 
+                            // mt='17%' 
                             h={['132.8px', null, null, '202.52px' ]}
                             // h='83%' 
                             borderRadius='lg' 
-                        >
+                        >   
+                            
 
                             <Box
                                 // border='1px'
