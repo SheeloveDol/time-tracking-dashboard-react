@@ -23,6 +23,7 @@ export const TimePeriodProvider = ({ children }) => {
         e.target.style.cursor = 'pointer'
     }
 
+    // This function is exist ONLY to allow the app to be compiled for deployment. ESlint was finding errors because it 'setData' is declared but not used anywhere. Netlify wouln't deploy the app with that error present. 
     const debuggingFunction = () => {
         setData(userData);
     }
