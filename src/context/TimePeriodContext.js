@@ -23,7 +23,9 @@ export const TimePeriodProvider = ({ children }) => {
         e.target.style.cursor = 'pointer'
     }
 
-    
+    const debuggingFunction = () => {
+        setData(userData);
+    }
 
 
 
@@ -34,7 +36,8 @@ export const TimePeriodProvider = ({ children }) => {
             handleDailyClick,
             handleWeeklyClick,
             handleMonthlyClick,
-            toggleColorAndPointer
+            toggleColorAndPointer,
+            debuggingFunction
         }}>
         {children}
     </TimePeriodContext.Provider>
