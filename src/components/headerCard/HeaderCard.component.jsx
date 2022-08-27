@@ -1,12 +1,12 @@
 import { Box, Flex, Button, Image, Stack, Text } from "@chakra-ui/react";
 import { useContext } from "react";
 
-import avatar from '../../assets/image-jeremy.png'
+import avatar from '../../assets/image-jeremy.png';
 import TimePeriodContext from "../../context/TimePeriodContext";
 
 const HeaderCard = () => {
 
-    const { period, handleDailyClick, handleWeeklyClick, handleMonthlyClick } = useContext(TimePeriodContext)
+    const { period, handleDailyClick, handleWeeklyClick, handleMonthlyClick, toggleColorAndPointer } = useContext(TimePeriodContext)
     
 
     return (
@@ -40,7 +40,7 @@ const HeaderCard = () => {
 
                     <Stack>
                         <Text 
-                            color='#7078C9'
+                            color='hsl(236, 100%, 87%)'
                             fontSize='lg'
                             
                         >
@@ -58,7 +58,8 @@ const HeaderCard = () => {
             </Stack>
 
             <Box  
-                bgColor='#1C204B'
+                
+                bgColor='hsl(235, 46%, 20%)'
                 flex='1'
                 // border='1px'
                 // borderColor='white'
@@ -69,13 +70,19 @@ const HeaderCard = () => {
             >
                 
                 <Stack 
-                
+                    
                     direction={['row',null, null, 'column']}
                     justify='space-between'
                 >
-                        { period === 'daily' ? <Text color='#fff'>Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick}>Daily</Text> }
-                        { period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick}>Weekly</Text> }
-                        { period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick}>Monthly</Text> }
+                        { 
+                            period === 'daily' ? <Text color='#fff' >Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick} onMouseOver={toggleColorAndPointer}>Daily</Text> 
+                        }
+                        { 
+                            period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick} onMouseOver={toggleColorAndPointer}>Weekly</Text> 
+                        }
+                        { 
+                            period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick} onMouseOver={toggleColorAndPointer}>Monthly</Text> 
+                        }
                 </Stack>
             </Box>
         </Flex>

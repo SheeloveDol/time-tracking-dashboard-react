@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import TimePeriodContext from "../../context/TimePeriodContext";
 
 const CardList = () => { 
-    const { period, data } = useContext(TimePeriodContext)
+    const { period, data, toggleColorAndPointer} = useContext(TimePeriodContext)
 
 
     return (
@@ -28,13 +28,14 @@ const CardList = () => {
             >
                 <HeaderCard />
             </GridItem>
+
             {
                 data.map( item => 
                     <GridItem 
                         key={item.id} 
                         bg={item.accentBgColor} 
                         borderRadius='xl' 
-                        borderColor='tomato.200' 
+                        // borderColor='tomato.200' 
                         m='auto' 
                         w={['327px', null, null, '255px']}
                         h={[null, null, null, '244px' ]}
@@ -56,9 +57,9 @@ const CardList = () => {
 
                         <Box 
                             bg={item.cardBgColor} 
-                            // mt='17%' 
+                            onMouseOver={toggleColorAndPointer}
                             h={['132.8px', null, null, '202.52px' ]}
-                            // h='83%' 
+
                             borderRadius='lg' 
                         >   
                             
