@@ -1,11 +1,9 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import CardList from "./components/cardList/CardList.component";
-import userData from "./data/userData";
-import { useState } from 'react'
 import { TimePeriodProvider } from './context/TimePeriodContext'
 
 function App() {   
-  const [data, setData] = useState(userData) 
+
   
     
 

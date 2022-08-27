@@ -1,4 +1,4 @@
-import { Box, Flex, Button, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { useContext } from "react";
 
 import avatar from '../../assets/image-jeremy.png';

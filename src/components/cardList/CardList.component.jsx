@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Image, Grid, GridItem, Button } from "@chakra-ui/react";
+import { Box, Text, Flex, Image, Grid, GridItem } from "@chakra-ui/react";
 import HeaderCard from "../headerCard/HeaderCard.component";
 import { useContext } from 'react'
 import TimePeriodContext from "../../context/TimePeriodContext";
