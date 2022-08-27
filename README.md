@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Frontend Mentor - Time tracking dashboard solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### The challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users should be able to:
 
-### `npm run build`
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Switch between viewing Daily, Weekly, and Monthly stats
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](Time-Tracking-Dashboard.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Links
 
-### `npm run eject`
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-time-tracking-dashboard-with-react-and-chakra-ui-utOsmaiis-)
+- Live Site URL: [Time Tracking Dashboard](https://habit-timetracker-dashboard.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Chakra-Ui](https://chakra-ui.com/) - Component Library
 
-## Learn More
+### What I learned
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+I learned a bit more about the useContext hook and how beneficial it is in terms of simplifying the delegation of different states and props to other components. I also became a lot more familiar with Chakra Ui and I love the ways in which it improves my workflow. I find that it makes building mobile-first responsive sites a lot more intuitive and faster too. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+const TimePeriodContext = createContext();
 
-### Making a Progressive Web App
+export const TimePeriodProvider = ({ children }) => {
+    const [ period, setPeriod ] = useState('weekly')
+    const [ data, setData ] = useState(userData) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    const handleDailyClick = () => {
+        setPeriod('daily')
+    }
 
-### Advanced Configuration
+    const handleWeeklyClick = () => {
+        setPeriod('weekly')
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    const handleMonthlyClick = () => {
+        setPeriod('monthly')
+    }
+}
+```
 
-### Deployment
+```js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  <Flex
+    borderRadius='xl'
+    w={['327px', null, null, '255px']} 
+    h={['203px', '203px', '203px', '518px']}
+    direction='column'
+    bgColor='#1C204B'
+    mx='auto'
+    >
 
-### `npm run build` fails to minify
+    <Stack 
+        borderRadius='xl'
+        p='2rem' 
+        bgColor='#5747EA'
+        flex='2'
+        direction={['row', null, null, 'column']}
+        spacing={['1rem', null, null, '2rem']}
+    >
+        
+            <Image 
+                borderRadius='full'
+                border='4px'
+                borderColor='white'
+                boxSize='75px' 
+                objectFit='cover'
+                src={avatar}
+                alt='Jeremy Robson'
+            />
+  </Flex>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Continued development
+
+Going forward I want to shit my focus more towards becoming extremily comfortable with useEffect for getting my data straight from an API. Also get great at using reactRouter and Redux as well. I am excited to get started on my next project which will be a multipaged implementing most if not all of the aformentioned toolsets. 
+
+
+## Author
+
+- Website - [Sheelove Dol](https://www.sheelovedol.com)
+- Frontend Mentor - [SudZero848](https://www.frontendmentor.io/profile/SudZero848)
+
+
+
