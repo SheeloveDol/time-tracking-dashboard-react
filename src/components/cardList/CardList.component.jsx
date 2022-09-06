@@ -56,6 +56,7 @@ const CardList = () => {
                         </Box>
 
                         <Box 
+                            _hover={{ bg: '#33397A', cursor: 'pointer' }}
                             bg={item.cardBgColor} 
                             onMouseOver={toggleColorAndPointer}
                             h={['132.8px', null, null, '202.52px' ]}

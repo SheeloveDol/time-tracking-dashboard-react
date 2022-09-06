@@ -70,18 +70,18 @@ const HeaderCard = () => {
             >
                 
                 <Stack 
-                    
+                    _hover={{ cursor: 'pointer', color: '#fff' }}
                     direction={['row',null, null, 'column']}
                     justify='space-between'
                 >
                         { 
-                            period === 'daily' ? <Text color='#fff' >Daily</Text> : <Text color='#7078C9' onClick={handleDailyClick} onMouseOver={toggleColorAndPointer}>Daily</Text> 
+                            period === 'daily' ? <Text  color='#fff' >Daily</Text> : <Text _hover={{ color: '#fff' }} color='#7078C9' onClick={handleDailyClick} >Daily</Text> 
                         }
                         { 
-                            period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text color='#7078C9' onClick={handleWeeklyClick} onMouseOver={toggleColorAndPointer}>Weekly</Text> 
+                            period === 'weekly' ? <Text color='#fff'>Weekly</Text> : <Text _hover={{ color: '#fff' }} color='#7078C9' onClick={handleWeeklyClick} >Weekly</Text> 
                         }
                         { 
-                            period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text color='#7078C9' onClick={handleMonthlyClick} onMouseOver={toggleColorAndPointer}>Monthly</Text> 
+                            period === 'monthly' ? <Text color='#fff'>Monthly</Text> : <Text _hover={{ color: '#fff' }} color='#7078C9' onClick={handleMonthlyClick} >Monthly</Text> 
                         }
                 </Stack>
             </Box>
