@@ -6,7 +6,7 @@ import TimePeriodContext from "../../context/TimePeriodContext";
 
 const HeaderCard = () => {
 
-    const { period, handleDailyClick, handleWeeklyClick, handleMonthlyClick, toggleColorAndPointer } = useContext(TimePeriodContext)
+    const { period, handleDailyClick, handleWeeklyClick, handleMonthlyClick} = useContext(TimePeriodContext)
     
 
     return (
