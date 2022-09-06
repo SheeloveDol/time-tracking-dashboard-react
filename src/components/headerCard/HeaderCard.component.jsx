@@ -70,7 +70,7 @@ const HeaderCard = () => {
             >
                 
                 <Stack 
-                    _hover={{ cursor: 'pointer', color: '#fff' }}
+                    _hover={{ cursor: 'pointer'}}
                     direction={['row',null, null, 'column']}
                     justify='space-between'
                 >
